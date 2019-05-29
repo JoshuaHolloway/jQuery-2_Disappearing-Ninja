@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing-Ninja</title>
+    <link rel="stylesheet" href="Disappearing-Ninja.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+    </script>
+
+
+    <script>
+      $(document).ready(
+        function()
+        {
+          var duration = 1e3; // 1e3ms. = 1s.
+
+          $('#img-11').on('click', function(){$('#img-11').hide(duration);});
+          $('#img-12').on('click', function(){$('#img-12').hide(duration);});
+          $('#img-13').on('click', function(){$('#img-13').hide(duration);});
+          $('#img-14').on('click', function(){$('#img-14').hide(duration);});
+
+          $('#img-21').on('click', function(){$('#img-21').hide(duration);});
+          $('#img-22').on('click', function(){$('#img-22').hide(duration);});
+          $('#img-23').on('click', function(){$('#img-23').hide(duration);});
+          $('#img-24').on('click', function(){$('#img-24').hide(duration);});
+
+          $('#Button-1').on('click', function() {$('img').show(duration); });
+        } // lambda
+      ); //$(document).ready() method
+
+    </script>
+
+
+  </head>
+
+  <body>
+    <div class="row">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-11">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-12">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-13">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-14">
+    </div>
+
+    <div class="row">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-21">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-22">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-23">
+      <img src="ninja.jpg" alt="Cannot find image!" id="img-24">
+    </div>
+
+    <button type="button" name="button-1" id="Button-1">Restore</button>
+
+  </body>
+</html>
