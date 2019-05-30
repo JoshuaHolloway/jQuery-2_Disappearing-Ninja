@@ -8,30 +8,27 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js">
     </script>
 
-
     <script>
       $(document).ready(
         function()
         {
+          // Fade in/out at 1-second duration
           var duration = 1e3; // 1e3ms. = 1s.
 
-          $('#img-11').on('click', function(){$('#img-11').hide(duration);});
-          $('#img-12').on('click', function(){$('#img-12').hide(duration);});
-          $('#img-13').on('click', function(){$('#img-13').hide(duration);});
-          $('#img-14').on('click', function(){$('#img-14').hide(duration);});
+          // Upon click of any image hide it:
+          $('img').on('click',
+            function()
+            {
+              var id = $(this).attr('id');
+              $('#' + id).hide(duration);
+            } // anonymous
+          ); // $('img').on() method
 
-          $('#img-21').on('click', function(){$('#img-21').hide(duration);});
-          $('#img-22').on('click', function(){$('#img-22').hide(duration);});
-          $('#img-23').on('click', function(){$('#img-23').hide(duration);});
-          $('#img-24').on('click', function(){$('#img-24').hide(duration);});
-
+          // Restore images upon button press:
           $('#Button-1').on('click', function() {$('img').show(duration); });
-        } // lambda
+        } // anonymous
       ); //$(document).ready() method
-
     </script>
-
-
   </head>
 
   <body>
